@@ -1,9 +1,19 @@
-html,
-body {
+html {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+  /* Background Stuff */
+  background-color: #222222;
+  background-image: url('/logo.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* font: ; */
+  color: #A6AAA9;
 }
 
 a {

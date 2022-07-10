@@ -1,0 +1,12 @@
+.welcome {
+  margin-top: auto;
+  bottom: 0;
+}
+
+.welcome__title {
+  color: #2A7F33;
+}
+
+.welcome__body {
+  color: #A6AAA9;
+}
