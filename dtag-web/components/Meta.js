@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-export default function Head({
+export default function Meta({
   title = 'dTAG',
   description = 'Create, or play decentralized Text Adventure Games'
 }) {
