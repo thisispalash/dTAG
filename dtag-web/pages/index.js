@@ -1,28 +1,47 @@
 import { useEffect, useState } from 'react';
+import { 
+  VStack,
+  Spacer,
+  Box, 
+  Heading,
+  Text,
+  Button 
+} from '@chakra-ui/react';
 
-import Head from '../components/Head';
+import Meta from '../components/Meta';
 import Header from '../components/Header';
-
-import styles from '../styles/main.module.css';
 
 export default function Index() {
 
 
   return (
     <>
-      <Head />
-      <Header index={true} />
-      <div className={styles.welcome}>
-        <p className={styles.welcome__title}>
-          decentralized Text Adventure Games
-        </p>
-        <p className={styles.welcome__body}>
-          Create, or play, text adventure games powered by NFTs!
-        </p>
-        <p>
-          {/* TODO Add `Enter App` button */}
-        </p>
-      </div>
+      <Meta />
+      <VStack
+        h='100%' w='100%'
+      >
+        <Header index={true} />
+        <Spacer />
+        <Box
+          p={4} pr={16} w='100%'
+          textAlign='right'
+        >
+          <Heading color='highlight' p={2} fontSize='4xl'>
+            decentralized Text Adventure Games
+          </Heading>
+          <Text color='text' p={2} fontSize='3xl'>
+            Create, or play, text adventure games powered by NFTs!
+          </Text>
+          <Button 
+            variant='outline' 
+            colorScheme='highlights' 
+            size='lg' m={8} mr={60}
+            fontFamily='heading'
+          >
+            Enter App
+          </Button>
+        </Box>
+      </VStack>
     </>
   );
 }

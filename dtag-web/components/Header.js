@@ -1,24 +1,21 @@
 import { useState, useEffect } from 'react';
+import {
+  HStack,
+  Spacer
+} from '@chakra-ui/react';
 
 import Score from './Score';
 import Wallet from './Wallet';
-
-import styles from '../styles/header.module.css';
 
 export default function Header({ 
   index = false
 }) {
 
-  const [ logged, setLogged ] = useState(index);
-
-  useEffect(() => {
-    index = logged;
-  }, [logged]);
-
   return(
-    <div className={styles.header}>
-      {!index && <Score />}
+    <HStack w='100%' p={4}>
       <Wallet />
-    </div>
+      <Spacer />
+      {!index && <Score />}
+    </HStack>
   );
 }
