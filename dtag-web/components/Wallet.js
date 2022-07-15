@@ -25,7 +25,7 @@ export default function Wallet({ }) {
   const [ connected, setConnected ] = useState(false);
 
   const chakraToast = useToast();
-  const { generateWallet, connectWallet, changeWallet, signMessage } = useWeb3Provider();
+  const { generateWallet, connectWallet, switchNetwork, changeWallet, signMessage } = useWeb3Provider();
 
   const index = async () => {
     const w = generateWallet();
@@ -41,15 +41,22 @@ export default function Wallet({ }) {
 
   // Run on wallet change
   useEffect( () => {
-
+    setConnected(true);
   }, [wallet]);
 
-  const switchWallet = () => {
-    setConnected(true);
+  const switchWallet = async () => {
+    console.log('Connecting to metamask..')
+    const addr = await connectWallet();
+    console.log(addr)
+    setAddress(addr);
+    setWallet('metamask');
   }
 
-  const switchNetwork = () => {
-    setNetwork(network == 'mumbai'? 'matic':'mumbai');
+  const switchChain = () => {
+    const newChain = network == 'mumbai'? 'matic':'mumbai'
+    setNetwork(newChain);
+    switchNetwork(newChain);
+    // TODO add check for user rejection
   }
 
 
@@ -71,13 +78,22 @@ export default function Wallet({ }) {
   }
 
   const saveKey = () => {
-    navigator.clipboard.writeText(wallet.privateKey);
-    chakraToast({
-      description: 'Private key is copied to clipboard',
-      status: 'success',
-      duration: 5000,
-      variant: 'subtle'
-    });
+    if(!connected) {
+      navigator.clipboard.writeText(wallet.privateKey);
+      chakraToast({
+        description: 'Private key is copied to clipboard',
+        status: 'success',
+        duration: 5000,
+        variant: 'subtle'
+      });
+    } else {
+      chakraToast({
+        description: 'Metamask wallet connected. Please get private key from the metamask extension.',
+        status: 'warning',
+        duration: 5000,
+        variant: 'subtle'
+      });
+    }
   }
 
   const polyScan = () => {
@@ -125,7 +141,7 @@ export default function Wallet({ }) {
             variant='outline'
             fontFamily='Comfortaa'
           >
-            <Button onClick={switchNetwork} disabled>
+            <Button onClick={switchChain} disabled>
               Switch Network
             </Button>
             <Button onClick={switchWallet}>
