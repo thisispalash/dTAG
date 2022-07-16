@@ -45,11 +45,20 @@ export default function Wallet({ }) {
   }, [wallet]);
 
   const switchWallet = async () => {
-    console.log('Connecting to metamask..')
-    const addr = await connectWallet();
-    console.log(addr)
-    setAddress(addr);
-    setWallet('metamask');
+    if(!connected) {
+      console.log('Connecting to metamask..')
+      const addr = await connectWallet();
+      console.log(addr)
+      setAddress(addr);
+      setWallet('metamask');
+    } else {
+      chakraToast({
+        description: 'Metamask wallet connected. Please change wallet from the metamask extension.',
+        status: 'warning',
+        duration: 5000,
+        variant: 'subtle'
+      });
+    }
   }
 
   const switchChain = () => {
