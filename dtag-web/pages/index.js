@@ -13,6 +13,10 @@ import Header from '../components/Header';
 
 export default function Index() {
 
+  const enterApp = () => {
+
+  }
+
 
   return (
     <>
@@ -37,6 +41,7 @@ export default function Index() {
             colorScheme='highlights' 
             size='lg' m={8} mr={60}
             fontFamily='heading'
+            onClick={enterApp}
           >
             Enter App
           </Button>
