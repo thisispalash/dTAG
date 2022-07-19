@@ -3,6 +3,7 @@ import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 import '../styles/globals.css';
 
 import { Web3Provider } from '../context/Web3Context';
+import { GameProvider } from '../context/GameContext';
 
 const colors = {
   background: '#222222',
@@ -36,7 +37,9 @@ function MyApp({ Component, pageProps }) {
   return (
     <ChakraProvider theme={theme}>
       <Web3Provider>
-        <Component {...pageProps} />
+        <GameProvider>
+          <Component {...pageProps} />
+        </GameProvider>
       </Web3Provider>
     </ChakraProvider>
   );

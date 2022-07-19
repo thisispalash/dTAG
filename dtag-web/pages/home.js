@@ -24,9 +24,9 @@ export default function Home({}) {
     <VStack>
       <Header />
       <Spacer />
-      <Repl />
-      <Spacer />
-      <Footer />
+      {/* <Repl /> */}
+      {/* <Spacer /> */}
+      {/* <Footer /> */}
     </VStack>
   );
 }
