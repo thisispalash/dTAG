@@ -4,19 +4,25 @@ import {
   Spacer
 } from '@chakra-ui/react';
 
-import Bag from './modals/Bag';
-import Shop from './modals/Shop';
-import Stats from './modals/Stats';
-import Create from './modals/Create';
-import Save from './modals/Save';
+import Bag from './footer-icons/Bag';
+import Shop from './footer-icons/Shop';
+import Stats from './footer-icons/Stats';
+import Create from './footer-icons/Create';
+import Save from './footer-icons/Save';
 
 export default function Footer({}) {
 
   return(
-    <HStack>
-      <Bag />
-      <Stats />
+    <HStack
+      w='100%' m={2} p={4}
+      color='grey'
+      fontSize='2xl'
+      spacing={8}
+      bottom={0}
+    >
       <Shop />
+      <Stats />
+      <Bag />
       <Spacer />
       <Save />
       <Create />
