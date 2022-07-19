@@ -14,6 +14,7 @@ import {
   Spacer
 } from '@chakra-ui/react';
 
+import Meta from '../components/Meta';
 import Header from '../components/Header';
 import Repl from '../components/Repl';
 import Footer from '../components/Footer';
@@ -21,12 +22,17 @@ import Footer from '../components/Footer';
 export default function Home({}) {
   
   return(
-    <VStack>
-      <Header />
-      <Spacer />
-      {/* <Repl /> */}
-      {/* <Spacer /> */}
-      {/* <Footer /> */}
-    </VStack>
+    <>
+      <Meta title='dTAG | Home' />
+      <VStack
+        h='100%'
+      >
+        <Header />
+        <Spacer />
+        <Repl />
+        <Spacer />
+        <Footer />
+      </VStack>
+    </>
   );
 }
