@@ -1,0 +1,44 @@
+html {
+  padding: 0;
+  margin: 0;
+  height: 100vh !important;
+  width: 100vw !important;
+}
+
+body {
+  /* Background Stuff */
+  background-color: #222222 !important;
+  background-image: url('/logo.png') !important;
+  background-size: contain !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  font-family: 'Edu SA Beginner';
+  color: #A6AAA9;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* For the app to be 100% */
+#__next {
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Fonts */
+
+@font-face {
+  font-family: 'Comfortaa';
+  src: url('/fonts/Comfortaa/Comfortaa-VariableFont_wght.tff') format('truetype');
+}
+
+@font-face {
+  font-family: 'Edu SA Beginner';
+  src: url('/fonts/Edu_SA_Beginner/EduSABeginner-VariableFont_wght.ttf') format('truetype');
+}
