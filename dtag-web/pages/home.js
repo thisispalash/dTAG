@@ -1,13 +1,3 @@
-
-/**
- * 
- * <Context.Provider>
- *   <Head />
- *   <Repl />
- *   <Foot />
- * </Context.Provider>  
- */
-
 import { useState, useEffect } from 'react';
 import {
   VStack,
