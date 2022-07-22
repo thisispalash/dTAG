@@ -58,6 +58,7 @@ export default function Repl({ }) {
       >
         {response.map( (res, index) => (
           <Box
+            key={index} // apparently an anti-pattern
             w='100%'
             color='text'
             fontSize='lg'
