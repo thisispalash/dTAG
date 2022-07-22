@@ -17,6 +17,8 @@ import {
 } from '@chakra-ui/react';
 import { FaAngleRight } from 'react-icons/fa';
 
+import TypeWriter from './atomic/TypeWriter';
+
 import { useGameProvider } from '../context/GameContext';
 
 export default function Repl({ }) {
@@ -66,7 +68,9 @@ export default function Repl({ }) {
           >
             <Text as='span' color='highlight' fontSize='xl'>{moves[index]}</Text>
             &nbsp;
-            <Text as='span' fontFamily='Comfortaa'>{res}</Text>
+            <Text as='span' fontFamily='Comfortaa'>
+              <TypeWriter data={res} />
+            </Text>
           </Box>
         ))}
       </VStack>
