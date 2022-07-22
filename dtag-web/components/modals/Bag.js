@@ -1,1 +1,0 @@
-import { FaBackpack } from 'react-icons/fa';
