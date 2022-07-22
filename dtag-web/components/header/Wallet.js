@@ -15,7 +15,7 @@ import {
 } from '@chakra-ui/react';
 import { FaRegCopy, FaRegSave, FaRegCompass } from 'react-icons/fa';
 
-import { useWeb3Provider } from '../context/Web3Context';
+import { useWeb3Provider } from '../../context/Web3Context';
 
 export default function Wallet({ }) {
 
