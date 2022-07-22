@@ -4,8 +4,8 @@ import {
   Button
 } from '@chakra-ui/react';
 
-import { useGameProvider } from '../context/GameContext';
-import { useWeb3Provider } from '../context/Web3Context';
+import { useGameProvider } from '../../context/GameContext';
+import { useWeb3Provider } from '../../context/Web3Context';
 
 export default function Score({
 

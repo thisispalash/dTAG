@@ -4,8 +4,8 @@ import {
   Spacer
 } from '@chakra-ui/react';
 
-import Score from './Score';
-import Wallet from './Wallet';
+import Score from './header/Score';
+import Wallet from './header/Wallet';
 
 export default function Header({ 
   index = false
