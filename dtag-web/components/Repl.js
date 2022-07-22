@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import {
   Box,
-  Flex,
   VStack,
   Text,
   Input,
@@ -11,9 +10,7 @@ import {
   Button,
   Icon,
   Spacer,
-  Divider,
-  InputRightAddon,
-  InputLeftAddon
+  Divider
 } from '@chakra-ui/react';
 import { FaAngleRight } from 'react-icons/fa';
 
