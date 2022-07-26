@@ -41,7 +41,7 @@ export default function Wallet({ }) {
 
   // Run on wallet change
   useEffect( () => {
-    setConnected(true);
+    if(wallet === 'metamask') setConnected(true);
   }, [wallet]);
 
   const switchWallet = async () => {
