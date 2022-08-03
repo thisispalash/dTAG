@@ -1,10 +1,17 @@
 import { useState, useEffect } from 'react';
 import { FaRegEdit } from 'react-icons/fa';
 import {
-  Icon
+  useDisclosure,
+  Icon, 
+  Modal,
+  ModalOverlay,
+  ModalContent, 
 } from '@chakra-ui/react';
 
+import CreateGame from '../modals/CreateGame';
+
 export default function Create({}) {
+  const { isOpen, onOpen, onClose } = useDisclosure()
 
   const iconHover = {
     color: 'highlight',
@@ -12,6 +19,14 @@ export default function Create({}) {
   }
 
   return (
-    <Icon as={FaRegEdit} opacity={0.8} _hover={iconHover} />
+    <>
+      <Icon as={FaRegEdit} opacity={0.8} _hover={iconHover} onClick={isOpen} />
+      <Modal isOpen={isOpen} onClose={onClose}>
+        <ModalOverlay />
+        <ModalContent>
+          <CreateGame />
+        </ModalContent>
+      </Modal>
+    </>
   );
 }
