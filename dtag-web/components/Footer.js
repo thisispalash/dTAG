@@ -4,11 +4,11 @@ import {
   Spacer
 } from '@chakra-ui/react';
 
-import Bag from './footer-icons/Bag';
-import Shop from './footer-icons/Shop';
-import Stats from './footer-icons/Stats';
-import Create from './footer-icons/Create';
-import Save from './footer-icons/Save';
+import Bag from './footer/Bag';
+import Shop from './footer/Shop';
+import Stats from './footer/Stats';
+import Create from './footer/Create';
+import Save from './footer/Save';
 
 export default function Footer({}) {
 

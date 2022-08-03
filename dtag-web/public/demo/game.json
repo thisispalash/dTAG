@@ -1,12 +1,29 @@
-[
-  {
-    "name": "start",
-    "points": 10,
-    "north": "",
-    "south": "",
-    "east": "",
-    "west": "",
-    "version": 1,
-    "items": []
-  }
-]
+{
+  "title": "demo",
+  "totalPoints": 100,
+  "poap": "",
+  "version": 1,
+  "rooms": [
+    {
+      "name": "start",
+      "description": "",
+      "points": 10,
+      "north": "",
+      "south": "",
+      "east": "",
+      "west": "",
+      "version": 1,
+      "items": []
+    },
+    {
+      "name": "",
+      "points": 10,
+      "north": "",
+      "south": "",
+      "east": "",
+      "west": "",
+      "version": 1,
+      "items": []
+    }
+  ]
+}

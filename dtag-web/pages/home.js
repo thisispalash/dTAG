@@ -8,6 +8,7 @@ import Meta from '../components/Meta';
 import Header from '../components/Header';
 import Repl from '../components/Repl';
 import Footer from '../components/Footer';
+import CreateGame from '../components/modals/CreateGame';
 
 export default function Home({}) {
   
@@ -20,6 +21,7 @@ export default function Home({}) {
         <Header />
         <Spacer />
         <Repl />
+        {/* <CreateGame /> */}
         <Spacer />
         <Footer />
       </VStack>
