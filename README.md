@@ -5,6 +5,8 @@ Create and play text adventure games, anywhere and everywhere, powered by blockc
 
 ## Game Mechanics
 
+- Maps are hexagonal in nature. ([Why?](https://www.youtube.com/watch?v=thOifuHs6eY))
+
 ## NFT integrations
 
 ## Usage Instructions
