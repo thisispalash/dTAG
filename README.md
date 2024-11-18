@@ -1,3 +1,9 @@
+> [!NOTE]
+> The project was revived during [ETHGlobal San Francisco 2024](https://github.com/thisispalash/ethglobal-sanfrancisco-2024) and is now [live](https://dtag.thisispalash.com/)!
+
+> [!TIP]
+> View [contracts](https://github.com/thisispalash/dtag-contracts), or visit the [website](https://dtag.thisispalash.com/) to create or play adventures!
+
 # decentralized Text Adventure Games
 > Created at [HackFS 2022](https://ethglobal.com/showcase/dtag-gtdab) and [Polygon BUIDL it](https://buidlit.devpost.com/)
 
